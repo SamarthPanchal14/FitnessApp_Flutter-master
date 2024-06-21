@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333922958017",
+    "project_id": "my-fitness-app-d21d5",
+    "storage_bucket": "my-fitness-app-d21d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333922958017:android:ab7b78bd66df9fc446b240",
+        "android_client_info": {
+          "package_name": "com.weltec.fitnessapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjMFA9VM6isr3p0-Y6gyJYJEK5QuzxEq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

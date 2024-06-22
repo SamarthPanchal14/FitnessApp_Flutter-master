@@ -1,6 +1,4 @@
 
-
-import 'package:fitnessapp/screens/home_page/activity_tile.dart';
 import 'package:flutter/material.dart';
 
 class RecentActivitySection extends StatelessWidget {
@@ -21,20 +19,23 @@ class RecentActivitySection extends StatelessWidget {
             ),
           ),
           SizedBox(height: 16),
-          ActivityTile(
-            title: 'Breakfast',
-            subtitle: '500 calories, 30g protein',
-            date: '2023-04-11',
+          ListTile(
+            leading: const Icon(Icons.fitness_center),
+            title: Text('Breakfast'),
+            subtitle: Text('500 calories, 30g protein'),
+            trailing: Text('2023-04-11'),
           ),
-          ActivityTile(
-            title: 'Running',
-            subtitle: '300 calories burned',
-            date: '2023-04-10',
+          ListTile(
+            leading: const Icon(Icons.fitness_center),
+            title: Text('Running'),
+            subtitle: Text('300 calories burned'),
+            trailing: Text('2023-04-10'),
           ),
-          ActivityTile(
-            title: 'Progress Photo',
-            subtitle: 'April 9, 2023',
-            date: '2023-04-09',
+          ListTile(
+            leading: const Icon(Icons.fitness_center),
+            title: Text('Progress Photo'),
+            subtitle: Text('April 9, 2023'),
+            trailing: Text('2023-04-24'),
           ),
         ],
       ),

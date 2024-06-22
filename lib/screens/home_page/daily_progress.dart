@@ -30,11 +30,9 @@ class DailyProgressSection extends StatelessWidget {
                     const Text('Calories Burned'),
                     const SizedBox(height: 8.0),
                     CircularProgressIndicator(
-                      value: 0.7,
+                      value: 0.9,
                       strokeWidth: 15,
-                      backgroundColor: Colors.grey[300],
-                      valueColor:
-                      const AlwaysStoppedAnimation<Color>(Colors.green),
+                      color: Colors.green,
                     ),
                   ],
                 ),
@@ -45,9 +43,8 @@ class DailyProgressSection extends StatelessWidget {
                     CircularProgressIndicator(
                       value: 0.4,
                       strokeWidth: 15,
-                      backgroundColor: Colors.grey[300],
-                      valueColor:
-                      const AlwaysStoppedAnimation<Color>(Colors.red),
+                      color: Colors.red,
+
                     ),
                   ],
                 ),

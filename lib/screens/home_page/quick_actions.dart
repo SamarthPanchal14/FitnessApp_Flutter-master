@@ -1,6 +1,4 @@
 
-
-import 'package:fitnessapp/screens/home_page/action_button.dart';
 import 'package:fitnessapp/screens/meal/meal_page.dart';
 import 'package:fitnessapp/screens/workout/workout_page.dart';
 import 'package:flutter/material.dart';
@@ -15,36 +13,38 @@ class QuickActionsSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ActionButton(
-            icon: Icons.restaurant,
-            label: 'Track Meal',
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MealPage()),
-              );
-            },
+          Column(
+            children: [
+              IconButton(
+                icon: Icon(Icons.restaurant),
+                iconSize: 36.0,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MealPage()),
+                  );
+                },
+              ),
+              const SizedBox(height: 8.0),
+              Text('Track Meal'),
+            ],
           ),
-          ActionButton(
-            icon: Icons.fitness_center,
-            label: 'Start Workout',
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WorkoutPage()),
-              );
-            },
+          Column(
+            children: [
+              IconButton(
+                icon: Icon(Icons.fitness_center),
+                iconSize: 36.0,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  WorkoutPage()),
+                  );
+                },
+              ),
+              const SizedBox(height: 8.0),
+              Text('Start Workout'),
+            ],
           ),
-          // ActionButton(
-          //   icon: Icons.camera_alt,
-          //   label: 'Upload Progress',
-          //   onPressed: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(builder: (context) => const ProgressTrackingPage()),
-          //     );
-          //   },
-          // ),
         ],
       ),
     );

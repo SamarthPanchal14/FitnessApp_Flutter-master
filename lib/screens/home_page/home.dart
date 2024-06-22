@@ -6,8 +6,6 @@ import 'package:fitnessapp/screens/home_page/user_profile.dart';
 import 'package:fitnessapp/screens/login/loginpage.dart';
 import 'package:fitnessapp/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:fitnessapp/screens/home_page/action_button.dart';
-import 'package:fitnessapp/screens/home_page/activity_tile.dart';
 import 'package:fitnessapp/screens/profile/profile.dart';
 import 'package:fitnessapp/screens/meal/meal_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';

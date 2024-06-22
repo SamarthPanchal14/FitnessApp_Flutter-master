@@ -29,9 +29,8 @@ class UserProfileSection extends StatelessWidget {
                 ),
                 const SizedBox(height: 8.0),
                 LinearProgressIndicator(
-                  value: 0.6,
-                  backgroundColor: Colors.grey[300],
-                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
+                  value: 0.8,
+                  color: Colors.green,
                 ),
               ],
             ),

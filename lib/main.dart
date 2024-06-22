@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fitnessapp/screens/bottom_nav/bottom_nav.dart';
 import 'package:fitnessapp/screens/home_page/home.dart';
 import 'package:fitnessapp/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: isLogin ? const HomePage() : const OnboardingScreen(),
+      home: isLogin ? const BottomNavScreen() : const OnboardingScreen(),
     );
   }
 }

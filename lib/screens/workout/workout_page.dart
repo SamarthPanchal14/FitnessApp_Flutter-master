@@ -14,6 +14,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Workout Page'),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

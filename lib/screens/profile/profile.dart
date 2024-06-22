@@ -191,6 +191,7 @@ class ProfilePage extends StatelessWidget {
       return Scaffold(
         appBar: AppBar(
           title: Text('Profile Page'),
+          centerTitle: true,
         ),
         body: Center(
           child: Text('User ID is empty'),
@@ -201,6 +202,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile Page'),
+        centerTitle: true,
       ),
       body: FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
         future: FirebaseFirestore.instance.collection('Users').doc(userId).get(),

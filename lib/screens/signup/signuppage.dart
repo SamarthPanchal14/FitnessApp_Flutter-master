@@ -67,8 +67,8 @@ class _SignUpPageState extends State<SignUpPage> {
           context,
           MaterialPageRoute(builder: (context) => HomePage()),
         );
-      } on FirebaseAuthException catch (ex) {
-        return UiHelper.CustomAlertBox(context, ex.code.toString());
+      } on FirebaseAuthException catch (g) {
+        return UiHelper.CustomAlertBox(context, g.code.toString());
       }
     }
   }
@@ -97,14 +97,29 @@ class _SignUpPageState extends State<SignUpPage> {
                 ],
               ),
             ),
-            UiHelper.CustomTextField(
-              nameController,
-              "Name",
-              Icons.person,
-              false,
-              TextInputType.text,
-              false,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+              child: TextField(
+                controller: nameController,
+                keyboardType: TextInputType.text,
+                obscureText: false,
+                decoration: InputDecoration(
+                  hintText: "Name",
+                  suffixIcon: Icon(Icons.person),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                ),
+              ),
             ),
+            // UiHelper.CustomTextField(
+            //   nameController,
+            //   "Name",
+            //   Icons.person,
+            //   false,
+            //   TextInputType.text,
+            //   false,
+            // ),
             UiHelper.CustomTextField(
               emailController,
               "Email",

@@ -50,15 +50,64 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          UiHelper.CustomTextField(emailController, "Email", Icons.mail, false,
-              TextInputType.emailAddress, false),
-          UiHelper.CustomTextField(passwordController, "Password",
-              Icons.password, true, TextInputType.text, true),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+            child: TextField(
+              controller: emailController,
+              keyboardType: TextInputType.emailAddress,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: "Email",
+                suffixIcon: Icon(Icons.mail),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+            child: TextField(
+              controller: passwordController,
+              keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
+              decoration: InputDecoration(
+                hintText: "Password",
+                suffixIcon: Icon(Icons.password),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+          ),
+          // UiHelper.CustomTextField(passwordController, "Password",
+          //     Icons.password, true, TextInputType.text, true),
+
           const SizedBox(height: 30),
-          UiHelper.CustomButton(() {
-            login(emailController.text.toString(),
-                passwordController.text.toString());
-          }, "Login"),
+          SizedBox(
+            height: 50,
+            width: 300,
+            child: ElevatedButton(
+              onPressed: () {
+                login(emailController.text.toString(),
+                    passwordController.text.toString());
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                backgroundColor: Colors.black,
+              ),
+              child: Text(
+                "Login",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+          ),
+          // UiHelper.CustomButton(() {
+          //   login(emailController.text.toString(),
+          //       passwordController.text.toString());
+          // }, "Login"),
           const SizedBox(
             height: 20,
           ),
